@@ -1,0 +1,125 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .nav ul li {
+        list-style: none;
+      }
+      .card-text{
+        display: flex;
+        align-items: center;
+        
+      }
+
+      .nav {
+        grid-area: menu;
+        background-color: rgb(82, 82, 233); 
+        display: flex;
+        flex-direction: column;
+        color: white; 
+     
+      }
+      .titulo-nav{
+        text-align: center;
+      }
+
+      header {
+        grid-area: header; 
+      }
+
+      main {
+        grid-area: principal; 
+        display: flex;
+        justify-content: space-around; 
+        overflow-y: scroll; 
+     }  
+      .caja-de-busqueda{
+        text-align: center;
+        margin-left: 5%;
+        width: 90%;
+        margin-bottom: 1%;
+      }
+      .titulo-caja-busqueda{
+        text-align: center;
+        
+      }
+      footer {
+        grid-area: pie-pagina; 
+        background-color: rgb(31, 31, 149); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white; 
+      }
+
+      .paginas {
+        margin-top: 10px; 
+        grid-area: paginas; 
+        display: flex;
+        justify-content: center; 
+      }
+
+      
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "menu header"
+          "menu principal"
+          "menu principal"
+          "pie-pagina paginas";
+        grid-template-columns: 10rem 3fr; 
+        grid-template-rows: 1fr 20fr 1fr; 
+        height: 100vh; 
+      }
+
+      .icons-redes {
+        display: flex;
+        justify-content: space-around; 
+        justify-content: center;
+        padding: 10px;
+      }
+.icons-redes i{
+  margin: 5px;
+}
+.mensaje-footer{
+  text-align: center;
+}
+      
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 10px; 
+        height: 50%;
+      }
+
+      
+      .menu-burger {
+        display: none; 
+      }
+    
+
+      @media (max-width: 576px) {
+        .grid-container {
+          display: block;
+        }
+
+        .galeria {
+          grid-template-columns: 1fr; 
+          gap: 0px; 
+        }
+
+        .nav {
+          padding-top: 0;
+          flex-direction: row; 
+          justify-content: space-around; 
+        }
+
+        .nav ul {
+          display: none;
+        }
+
+        .menu-burger {
+          display: block;
+        }
+      }
